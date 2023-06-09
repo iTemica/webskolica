@@ -1,9 +1,12 @@
 <template>
-	<div>Hello, world!</div>
+	<div>
+		Count is: {{ count }}
+		<button @click="count++">increment</button>
+
+		<button @click="count--">decrement</button>
+	</div>
 </template>
 
 <script lang="ts" setup>
-onMounted(() => {
-	console.log("mounted");
-});
+const count = ref(0);
 </script>
